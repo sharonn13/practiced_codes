@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class RossTeamSplitter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int totalFriends = sc.nextInt();
+        int totalTeams = sc.nextInt();
+
+        int perTeam = totalFriends / totalTeams;
+
+        int leftOut = totalFriends % totalTeams;
+
+        System.out.println("The number of friends in each team is " + perTeam + " and left out is " + leftOut);
+
+    
+    }
+}
