@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int num = 1;
+        int total = n * (n + 1);
+        int end = total + 1;
+
+        for (int i = 0; i < n; i++) {
+            for (int s = 0; s < 2 * i; s++) {
+                System.out.print("-");
+            }
+
+            int count = n - i;
+
+            for (int j = 0; j < count; j++) {
+                System.out.print(num++);
+                if (j < count - 1) System.out.print("*");
+            }
+
+            System.out.print("*");
+
+            end -= count;
+            int temp = end;
+            for (int j = 0; j < count; j++) {
+                System.out.print(temp++);
+                if (j < count - 1) System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+}
