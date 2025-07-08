@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        long sq = (long) num * num;
+        String s = String.valueOf(sq);
+        int d = String.valueOf(num).length();
+        String right = s.substring(s.length() - d);
+        String left = s.substring(0, s.length() - d);
+        int sum = 0;
+        if (!left.equals("")) sum += Integer.parseInt(left);
+        sum += Integer.parseInt(right);
+        if (sum == num)
+            System.out.println("Kaprekar Number");
+        else
+            System.out.println("Not a Kaprekar Number");
+    }
+}
